@@ -1,0 +1,30 @@
+{
+  "name": "erc721-pipe",
+  "version": "1.0.0",
+  "description": "A TypeScript project with watch mode for development",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
+    "watch": "tsc --watch",
+    "dev:debug": "nodemon --watch 'src/**/*.ts' --exec 'node --inspect -r ts-node/register' src/index.ts",
+    "clean": "rm -rf dist/*"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@subsquid/evm-abi": "^0.3.1",
+    "@subsquid/evm-codec": "^0.3.0",
+    "@subsquid/http-client": "1.7.0-portal-api.d48fcb",
+    "@subsquid/portal-client": "0.0.1-portal-api.d48fcb",
+    "@subsquid/solana-stream": "1.0.0-portal-api.d48fcb"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "nodemon": "^3.1.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2"
+  }
+}
